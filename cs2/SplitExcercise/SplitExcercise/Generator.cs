@@ -58,12 +58,13 @@ namespace SplitExcercise
             string data = JsonSerializer.Serialize(tiles);
             File.WriteAllText("leveldata.json", data);
 
-            //deze is ter voorbeeld om even snel binary (byte enzo) te serializen, graag niet echt gebruiken ivm een security issue
-            BinaryFormatter formatter = new BinaryFormatter();
-            using (FileStream fs = new FileStream("leveldata.bin", FileMode.Create, FileAccess.Write))
-            {
-                formatter.Serialize(fs, tiles);
-            }
+             //deze is ter voorbeeld om even snel binary (byte enzo) te serializen, graag niet echt gebruiken ivm een security issue
+            //is inmiddels depricated
+            //BinaryFormatter formatter = new BinaryFormatter();
+            //using (FileStream fs = new FileStream("leveldata.bin", FileMode.Create, FileAccess.Write))
+            //{
+            //    formatter.Serialize(fs, tiles);
+            //}
         }
     }
 }
